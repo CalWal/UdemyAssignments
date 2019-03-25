@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import UserInput from "./components/UserInput";
 import UserOutput from "./components/UserOutput";
+import Lists from "./lists/Lists";
 
 import "./styles.css";
 
@@ -31,14 +32,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <UserInput
+        {/* <UserInput
           change={this.handleChange}
           inputName={this.state.inputName}
         />
         <UserOutput username={this.state.username} onClick={this.handleClick} />
         <button onClick={this.handleClick}>Try This!</button>
 
-        <UserOutput username="Cal" onClick={this.handleClick} />
+        <UserOutput username="Cal" onClick={this.handleClick} /> */}
+        <Lists />
       </div>
     );
   }
