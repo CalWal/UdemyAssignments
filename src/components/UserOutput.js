@@ -1,10 +1,8 @@
 import React from "react";
-
-const UserOutput = () => {
+const UserOutput = props => {
   return (
-    <div>
-      <p>PlaceHolder text</p>
-      <p>PlaceHolder text</p>
+    <div className="outputStyle">
+      <p>{props.username}</p>
     </div>
   );
 };
