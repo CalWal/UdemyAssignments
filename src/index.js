@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import UserInput from "./components/UserInput";
 import UserOutput from "./components/UserOutput";
 import Lists from "./lists/Lists";
+import Char from "./components/Char";
 
 import "./styles.css";
 

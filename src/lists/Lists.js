@@ -1,4 +1,5 @@
 import React from "react";
+import Char from "../components/Char";
 
 class Lists extends React.Component {
   constructor() {
@@ -15,7 +16,26 @@ class Lists extends React.Component {
     });
   }
 
+  deleteLetters(index) {
+    const text = this.state.input.split("");
+    text.splice(index, 1);
+    const updatedText = text.join("");
+    this.setState({
+      input: updatedText
+    });
+  }
+
   render() {
+    const charList = this.state.input.split("").map((ch, index) => {
+      return (
+        <Char
+          character={ch}
+          key={index}
+          clicked={() => this.deleteLetters(index)}
+        />
+      );
+    });
+
     return (
       <div>
         <input
@@ -29,6 +49,7 @@ class Lists extends React.Component {
             ? "Too Many Letters!"
             : "You are in the clear!"}
         </p>
+        {charList}
       </div>
     );
   }
